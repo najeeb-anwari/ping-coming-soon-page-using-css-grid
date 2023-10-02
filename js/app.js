@@ -9,13 +9,16 @@ form.addEventListener("submit", (event) => {
 
     const emailValue = email.value.trim();
 
-
-
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     const isValidEmail = emailRegex.test(emailValue);
     if(!isValidEmail){
         emailFormGroup.classList.add("invalid");
-        emailInvalidFeedback.innerHTML = "Please provide a valid email address";
+        if(emailValue === "") {
+            emailInvalidFeedback.innerHTML = "Whoops! It looks like you forgot to add your email";
+        }
+        else {
+            emailInvalidFeedback.innerHTML = "Please provide a valid email address";
+        }
         return;
     }
     else {
