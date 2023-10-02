@@ -1,0 +1,171 @@
+:root {
+    /** Primary colors **/
+    --blue: hsl(223, 87%, 63%);
+    /** Secondary colors **/
+    --pale-blue: hsl(223, 100%, 88%);
+    --light-red: hsl(354, 100%, 66%);
+
+
+    /** Neutral **/
+    --gray: hsl(0, 0%, 59%);
+    --very-dark-blue: hsl(209, 33%, 12%);
+    font-size: 20px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    padding: 0 1.5rem;
+    text-align: center;
+    font-family: 'Libre Franklin', sans-serif;
+
+}
+
+header {
+    margin-top: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+header .logo {
+    width: 60px;
+}
+
+.main-heading {
+    font-size: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--gray);
+    font-weight: 300;
+}
+
+.main-heading span {
+    color: var(--very-dark-blue);
+    font-weight: 700;
+}
+
+header .sub-text {
+    font-size: 14px;
+    color: var(--very-dark-blue);
+}
+
+.subscribe-form {
+    display: grid;
+    gap: .5rem;
+    padding: 0 1rem;
+}
+
+.subscribe-form input {
+    padding: .7rem 1.5rem;
+    border-radius: 5rem;
+    border: 1px solid var(--pale-blue);
+    outline: none;
+    width: 100%;
+}
+
+.invalid-feedback {
+    display: none;
+    color: var(--light-red);
+    font-size: .6rem;
+    margin: 5px 1.5rem;
+    font-style: italic;
+}
+
+.invalid .invalid-feedback {
+    display: block;
+}
+
+.invalid input {
+    border: 1px solid var(--light-red);
+}
+
+
+.subscribe-form .notify-button {
+    padding: .7rem 2rem;
+    border-radius: 5rem;
+    background-color: var(--blue);
+    color: white;
+    font-weight: 300;
+    box-shadow: 0 5px 10px 0 hsla(179, 62%, 43%, .5);
+    transition: all .3s;
+}
+
+.subscribe-form .notify-button:hover {
+    cursor: pointer;
+    background-color: hsl(223, 87%, 68%);
+}
+
+.dashboard-img {
+    max-width: 100%;
+    margin: 3rem 0;
+}
+
+footer {
+    font-size: 16px;
+    margin-bottom: 2rem;
+    display: grid;
+    gap: 1rem;
+    color: var(--gray);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-icons .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border: 1px solid var(--gray);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: var(--blue);
+    transition: all .3s;
+}
+
+.social-icons .icon:hover {
+    background-color: var(--blue);
+    color: white;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media (min-width: 765px) {
+    header, main {
+        max-width: 550px;
+        justify-self: center;
+    }
+    header .logo {
+        width: 60px;
+    }
+    .main-heading {
+        font-size: 1.5rem;
+    }
+    
+    .subscribe-form {
+        grid-template-columns: 3fr 1.5fr;
+        padding: 0;
+    }
+
+    .invalid-feedback {
+        text-align: left;
+    }
+}

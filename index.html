@@ -7,33 +7,35 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Ping coming soon page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css" integrity="sha512-W/zrbCncQnky/EzL+/AYwTtosvrM+YG/V6piQLSe2HuKS6cmbw89kjYkp3tWFn1dkWV7L1ruvJyKbLz73Vlgfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/app.css">
 </head>
 <body>
   <header>
-    <img src="./images/logo.svg" alt="Ping Logo">
-    <h1 class="main-heading">We are launching soon!</h1>
+    <img class="logo" src="./images/logo.svg" alt="Ping Logo">
+    <h1 class="main-heading">We are launching <span>soon!</span></h1>
     <p class="sub-text">Subscribe and get notified</p>
   </header>
   
   <main>
-    <form class="subscribe-form">
-      <input type="email" class="email-input" placeholder="Your email address..." required>
+    <form id="form" class="subscribe-form">
+      <div class="form-group">
+        <input type="email" id="email" class="email-input" placeholder="Your email address..." required>
+        <div class="invalid-feedback"></div>
+      </div>
       <button type="submit" class="notify-button">Notify Me</button>
     </form>
-    <img src="./images/illustration-dashboard.png" alt="Dashboard illustration">
+    <img class="dashboard-img" src="./images/illustration-dashboard.png" alt="Dashboard illustration">
   </main>
   
   <footer>
     <div class="social-icons">
-      <a href="#" class="icon"><img src="./images/facebook-logo.svg" alt="Facebook svg logo from iconfinder.com"></a>
-      <a href="#" class="icon"><img src="./images/twitter-logo.svg" alt="Twitter svg logo from iconfinder.com"></a>
-      <a href="#" class="icon"><img src="./images/instagram-logo.svg" alt="Instagram svg logo from iconfinder.com"></a>
+      <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#" class="icon"><i class="fa-brands fa-twitter"></i></a>
+      <a href="#" class="icon"><i class="fa-brands fa-instagram"></i></a>
     </div>
     <p class="copyright">&copy; Copyright Ping. All rights reserved.</p>
     <p class="attribution">
@@ -41,6 +43,7 @@
       Coded by <a href="https://www.frontendmentor.io/profile/najeeb-anwari">Abdul Najeeb Anwari</a>.
     </p>
   </footer>
-  
+  <script src="https://kit.fontawesome.com/597953cac7.js" crossorigin="anonymous"></script>
+  <script src="./js/app.js"></script>
 </body>
 </html>
